@@ -5,7 +5,7 @@ first_name = input("Please enter your name: ")
 def calculate_vol_cylinder():
     radius = float(input('Please enter your radius '))
     height = float(input('Please enter the height '))
-    result = 2 * math.pie * radius * height
+    result = 2 * math.pi * radius * height
     print(result)
 
 def calculate_quadratic():
@@ -39,7 +39,6 @@ def calculate_power():
 def pythogoras_theorem():
     a = float(input('Please enter the a: '))
     b = float(input('Please enter the b: '))
-    c = float(input('Please enter c: '))
     result = math.sqrt((a ** 2) + (b ** 2))
     print(f'The nth term of the arithmetic progression is {result}')
 
@@ -57,23 +56,24 @@ def gravitational_force():
 def main_menu():
         print("\nChoose an option from the following:")
         print("i) Calculate volume of a cylinder")
-        print("ii) Calculate Kinetic Energy")
+        print("ii) Calculate quadratic Equation")
         print("iii) Calculate Power")
-        print("iv) Calculate Power")
-        print("v) Calculate Pythogoras Theorem")
+        print("iv) Calculate Pythogoras Theorem")
+        print("v) Calculate Gravitational force")
+
 
         choice = input("Enter your choice (i, ii, iii, iv, v): ").lower()
 
         if choice == 'i':
-            calculate_vol_cylinder
+            calculate_vol_cylinder()
         elif choice == 'ii':
-            calculate_kinetic_energy()
+            calculate_quadratic()
         elif choice == 'iii':
-            gravitational_force()
-        elif choice == 'iv':
             calculate_power()
-        elif choice == 'v':
+        elif choice == 'iv':
             pythogoras_theorem()
+        elif choice == 'v':
+            gravitational_force()
         else:
             print("Invalid choice. Please select a valid option.")
 
